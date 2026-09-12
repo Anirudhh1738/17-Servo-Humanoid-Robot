@@ -1,5 +1,4 @@
-# 🤖 17-Servo Humanoid Robot
-<h1 align="center">17-SERVO HUMANOID ROBOT</h1>
+<h1 align="center">🤖 17-SERVO HUMANOID ROBOT</h1>
 
 <p align="center">
   <img src="images/robot-final.jpg.jpg" width="500">
