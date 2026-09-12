@@ -1,378 +1,165 @@
-# 17-Servo Humanoid Robot
+<div align="center">
 
-<p align="center">
-  <img src="images/robot-final.jpg.jpg" width="450">
+# 🤖 17-SERVO HUMANOID ROBOT
+
+### **A DIY Humanoid Robot Built From Servos, Sensors, Wires & Questionable Amounts of Patience.**
+
+<p>
+  <img src="images/robot-final.jpg.jpg" width="520">
 </p>
 
-<p align="center">
-  <strong>A DIY 17-Servo Humanoid Robot</strong><br>
-  Mechanical Design • Electronics • Programming • Wireless Control
+<p>
+  <strong>MECHANICAL DESIGN</strong> •
+  <strong>ELECTRONICS</strong> •
+  <strong>EMBEDDED SYSTEMS</strong> •
+  <strong>WIRELESS CONTROL</strong>
 </p>
 
-<p align="center">
-  <a href="#overview">Overview</a> •
-  <a href="#features">Features</a> •
-  <a href="#hardware">Hardware</a> •
-  <a href="#circuit-diagrams">Circuit Diagrams</a> •
-  <a href="#software">Software</a> •
-  <a href="#robot-gallery">Gallery</a>
+<p>
+  <a href="#-overview">Overview</a> •
+  <a href="#-features">Features</a> •
+  <a href="#-hardware">Hardware</a> •
+  <a href="#-circuit-diagrams">Circuits</a> •
+  <a href="#-software">Software</a> •
+  <a href="#-gallery">Gallery</a> •
+  <a href="#-build-process">Build</a>
 </p>
 
----
+<p>
+  <img src="https://img.shields.io/badge/Robot-Humanoid-00A8FF?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Servos-17-7B61FF?style=for-the-badge">
+  <img src="https://img.shields.io/badge/ESP32-Receiver-FF6B35?style=for-the-badge">
+  <img src="https://img.shields.io/badge/ESP8266-Controller-00C853?style=for-the-badge">
+</p>
 
-## Overview
+<p>
+  <img src="https://img.shields.io/badge/Status-Working%20Prototype-2EA44F?style=flat-square">
+  <img src="https://img.shields.io/github/license/Anirudhh1738/17-Servo-Humanoid-Robot?style=flat-square">
+</p>
 
-The **17-Servo Humanoid Robot** is a DIY humanoid robotics project designed and built to explore servo control, embedded electronics, wireless communication, flex-sensor input, and programmable humanoid movement.
-
-The robot uses an **ESP32-based receiver system** to control its servo motors and an **ESP8266-based hand controller** with flex-sensor input for wireless control.
-
-This repository contains the robot's source code, circuit diagrams, photographs, and other project resources required to understand and reproduce the system.
-
----
-
-## Features
-
-- 17-servo humanoid robot
-- ESP32-based robot receiver
-- ESP8266-based wireless hand controller
-- Flex-sensor based control
-- OLED display
-- Audio amplifier / speaker system
-- 16 servo control system
-- Dedicated power distribution for servos
-- Wireless communication between controller and robot
-- Custom 3D-printed mechanical structure
-- Programmable humanoid movements
+</div>
 
 ---
 
-## Robot Specifications
+## ⚡ Overview
 
-| Specification | Details |
-|---|---|
-| Robot Type | Humanoid |
-| Servo Motors | 17 |
-| Main Controller | ESP32 |
-| Hand Controller | ESP8266 |
-| Input | Flex Sensors |
-| Display | OLED |
-| Audio | Amplifier + Speaker |
-| Servo Control | PCA9685 |
-| Communication | Wireless |
-| Mechanical Parts | 3D Printed |
+What started as a collection of motors, wires, plastic parts and several
+excellent opportunities to question life eventually became this:
+
+**a 17-servo humanoid robot controlled wirelessly through a flex-sensor
+hand controller.**
+
+The robot uses an **ESP32** as its main controller and an **ESP8266**
+as the wireless hand-controller platform.
+
+The system combines:
+
+- Servo-based humanoid movement
+- Flex-sensor input
+- Wireless communication
+- ESP32 embedded control
+- ESP8266 hand-controller input
+- PCA9685 servo control
+- OLED feedback
+- Audio electronics
+- Custom mechanical construction
+
+This repository documents the project from the electronics and firmware
+to the mechanical build and testing process.
+
+> **Warning:** 17 servos may look peaceful in a photo.  
+> Power them incorrectly and they suddenly become extremely confident.
 
 ---
 
-# Hardware
+# ✨ Features
 
-## Robot
+<table>
+<tr>
+<td width="50%">
 
-The robot consists of:
+### 🦾 Humanoid Mechanics
 
-- ESP32 development board
-- PCA9685 servo driver
 - 17 servo motors
+- Custom mechanical structure
+- 3D-printed components
+- Multiple articulated joints
+- Custom feet and body structure
+
+</td>
+
+<td width="50%">
+
+### 🧠 Control System
+
+- ESP32 robot receiver
+- ESP8266 hand controller
+- Flex-sensor input
+- Wireless communication
+- Programmable movements
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+### 🔌 Electronics
+
+- PCA9685 servo control
+- Dedicated servo power distribution
 - OLED display
 - Audio amplifier
-- Speaker
-- Power supply
-- Wiring and connectors
-- Custom 3D-printed mechanical parts
+- Speaker system
+- Custom wiring
 
-## Hand Controller
+</td>
 
-The wireless controller consists of:
+<td>
 
-- ESP8266 development board
-- Flex sensor
-- Supporting resistors
-- Power supply
-- Control wiring
+### 🛠️ Documentation
 
----
+- Source code
+- Circuit diagrams
+- Build process
+- Calibration information
+- Project photographs
+- Demonstration videos
 
-# Circuit Diagrams
-
-All circuit diagrams are organized inside the `diagrams` folder.
-
-## Receiver Diagrams
-
-### ESP32 + OLED + Amplifier
-
-This diagram shows the main receiver electronics, including the ESP32, OLED display, amplifier and related connections.
-
-<p align="center">
-  <img src="diagrams/receiver/esp32-oled-amplifier.png.png" width="650">
-</p>
-
-### Servo Connections
-
-This diagram shows the signal connections between the PCA9685 servo driver and the servo motors.
-
-<p align="center">
-  <img src="diagrams/receiver/servo-connections.png.png" width="650">
-</p>
-
-### Servo Power Supply
-
-This diagram shows how power is distributed to the servo motors.
-
-<p align="center">
-  <img src="diagrams/receiver/servo-power-supply.png.png" width="650">
-</p>
-
-## Transmitter Diagram
-
-### Flex Sensor Hand Controller
-
-This diagram shows the ESP8266 hand controller and flex-sensor circuit.
-
-<p align="center">
-  <img src="diagrams/transmitter/flex-sensor-transmitter.png.png" width="650">
-</p>
+</td>
+</tr>
+</table>
 
 ---
 
-# Software
+# 🧩 How the System Works
 
-The project contains two main software components.
-
-## 1. Humanoid Robot Receiver
-
-The receiver software runs on the **ESP32** and controls the robot's servo motors and other connected electronics.
-
-[Open Receiver Code](17-Servo-Humanoid-Robot/ESP32_Humanoid_Robot_RECEIVER)
-
-## 2. Hand Controller Transmitter
-
-The transmitter software runs on the **ESP8266** and reads the flex-sensor input before sending control commands wirelessly to the robot.
-
-[Open Transmitter Code](17-Servo-Humanoid-Robot/ESP8266_Hand_Controller_TRANSMITTER_Y4_BUTTON)
-
----
-
-# Installation
-
-## Receiver
-
-1. Install the Arduino IDE.
-2. Install ESP32 board support.
-3. Open the receiver `.ino` file.
-4. Install the required libraries.
-5. Select the correct ESP32 board and COM port.
-6. Upload the program to the ESP32.
-7. Open the Serial Monitor to verify the system.
-
-## Transmitter
-
-1. Install the Arduino IDE.
-2. Install ESP8266 board support.
-3. Open the transmitter `.ino` file.
-4. Install the required libraries.
-5. Select the correct ESP8266 board and COM port.
-6. Upload the program.
-7. Open the Serial Monitor to verify communication.
-
----
-
-# Servo Configuration
-
-The robot uses **17 servo motors** distributed across the humanoid structure.
-
-Servo positions and movement ranges are defined in the receiver software.
-
-Before operating the robot, make sure:
-
-- Servo horns are installed in the correct position.
-- Servo power is supplied separately from the controller when required.
-- The PCA9685 connections are correct.
-- Servo limits are properly calibrated.
-- The robot is mechanically stable.
-
----
-
-# Calibration
-
-Servo calibration is important before performing full robot movements.
-
-Recommended procedure:
-
-1. Power the electronics.
-2. Check the servo driver connections.
-3. Test each servo individually.
-4. Adjust the neutral position.
-5. Verify the mechanical alignment.
-6. Set safe movement limits.
-7. Test individual movements.
-8. Test complete movements after calibration.
-
-Do not force a servo against its mechanical limit.
-
----
-
-# Robot Gallery
-
-## Front View
-
-<p align="center">
-  <img src="images/robot-front.jpg.jpg" width="450">
-</p>
-
-## Final Robot
-
-<p align="center">
-  <img src="images/robot-final.jpg.jpg" width="450">
-</p>
-
-## Display / Face
-
-<p align="center">
-  <img src="images/robot-display.jpg.jpg" width="450">
-</p>
-
-## Electronics
-
-<p align="center">
-  <img src="images/robot-electronics.jpg.jpg" width="450">
-</p>
-
-## Testing
-
-<p align="center">
-  <img src="images/robot-testing.jpg.jpg" width="450">
-</p>
-
-## Night Test
-
-<p align="center">
-  <img src="images/robot-night-test.jpg.jpg" width="450">
-</p>
-
----
-
-# Mechanical Design
-
-The humanoid robot uses custom-designed mechanical parts.
-
-The complete robot design files are provided separately because the design archive is large.
-
-## 3D Design Files
-
-The complete `Robo_design.zip` package can be downloaded from the project's **GitHub Releases**.
-
-> Release download link will be added here.
-
----
-
-# Build Process
-
-The robot can be built in several stages:
-
-### 1. Mechanical Assembly
-
-Assemble the 3D-printed body, arms, legs, head and other structural components.
-
-### 2. Servo Installation
-
-Install and align the servo motors according to their respective positions.
-
-### 3. Electronics
-
-Connect the ESP32, PCA9685, OLED, amplifier and other electronic components.
-
-### 4. Power System
-
-Connect the servo power distribution system and ensure the power supply is suitable for the servo load.
-
-### 5. Controller
-
-Build the ESP8266 hand controller and connect the flex sensor.
-
-### 6. Programming
-
-Upload the receiver and transmitter firmware.
-
-### 7. Calibration
-
-Calibrate the servos and test individual movements.
-
-### 8. Final Testing
-
-Test wireless control and complete humanoid movements.
-
----
-
-# Downloads
-
-## Robot Design Files
-
-The complete 3D design package is available through GitHub Releases.
-
-**Download:**  
-> Release link will be added here.
-
-## Source Code
-
-- [ESP32 Humanoid Robot Receiver](17-Servo-Humanoid-Robot/ESP32_Humanoid_Robot_RECEIVER)
-- [ESP8266 Hand Controller Transmitter](17-Servo-Humanoid-Robot/ESP8266_Hand_Controller_TRANSMITTER_Y4_BUTTON)
-
-## Circuit Diagrams
-
-All diagrams are available here:
-
-- [Receiver Diagrams](diagrams/receiver)
-- [Transmitter Diagram](diagrams/transmitter)
-
----
-
-# Videos
-
-Project videos and demonstrations will be added here.
-
-### Robot Demonstration
-
-> YouTube link will be added here.
-
-### Build / Assembly
-
-> YouTube link will be added here.
-
-### Hand Controller Demonstration
-
-> YouTube link will be added here.
-
----
-
-# Project Structure
+The project is divided into two main electronic systems.
 
 ```text
-17-Servo-Humanoid-Robot/
-│
-├── 17-Servo-Humanoid-Robot/
-│   │
-│   ├── ESP32_Humanoid_Robot_RECEIVER/
-│   │   └── 2ESP32_Humanoid_Robot_RECEIVER/
-│   │
-│   └── ESP8266_Hand_Controller_TRANSMITTER_Y4_BUTTON/
-│       └── ESP8266_Hand_Controller_TRANSMITTER_Y4_BUTTON/
-│
-├── diagrams/
-│   │
-│   ├── receiver/
-│   │   ├── esp32-oled-amplifier.png.png
-│   │   ├── servo-connections.png.png
-│   │   └── servo-power-supply.png.png
-│   │
-│   └── transmitter/
-│       └── flex-sensor-transmitter.png.png
-│
-├── images/
-│   ├── robot-display.jpg.jpg
-│   ├── robot-electronics.jpg.jpg
-│   ├── robot-final.jpg.jpg
-│   ├── robot-front.jpg.jpg
-│   ├── robot-night-test.jpg.jpg
-│   └── robot-testing.jpg.jpg
-│
-├── LICENSE
-└── README.md
+                 ┌─────────────────────────┐
+                 │   FLEX SENSOR GLOVE     │
+                 │                         │
+                 │       ESP8266           │
+                 └────────────┬────────────┘
+                              │
+                              │ Wireless
+                              ▼
+                 ┌─────────────────────────┐
+                 │      ESP32 RECEIVER     │
+                 │                         │
+                 │  Robot Control System   │
+                 └────────────┬────────────┘
+                              │
+                              ▼
+                 ┌─────────────────────────┐
+                 │       PCA9685           │
+                 │    SERVO CONTROLLER     │
+                 └────────────┬────────────┘
+                              │
+                              ▼
+                 ┌─────────────────────────┐
+                 │      17 SERVO MOTORS    │
+                 │                         │
+                 │   HUMANOID MOVEMENT     │
+                 └─────────────────────────┘
